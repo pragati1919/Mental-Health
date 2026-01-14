@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phobia Encyclopedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><strong>MindSpace</strong></div>
+        <div><a href="index.html">Home</a> | <a href="mental-health.html">Mental Health</a></div>
+    </nav>
+
+    <div class="container">
+        <h1>Phobia Directory</h1>
+        <input type="text" id="phobiaSearch" onkeyup="filterPhobias()" placeholder="Search phobias (e.g., 'water')..." style="width: 100%; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+
+        <div id="phobiaList">
+            <div class="card phobia-card">
+                <h3>Acrophobia</h3>
+                <p>The intense fear of heights. Can cause dizziness and panic in elevated places.</p>
+            </div>
+            <div class="card phobia-card">
+                <h3>Cynophobia</h3>
+                <p>The irrational fear of dogs. Often stems from childhood experiences.</p>
+            </div>
+            <div class="card phobia-card">
+                <h3>Nyctophobia</h3>
+                <p>An extreme fear of the dark or night environments.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

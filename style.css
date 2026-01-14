@@ -1,0 +1,96 @@
+:root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --primary: #64748b;
+    --accent: #739072;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text: #f1f5f9;
+    --nav-bg: rgba(15, 23, 42, 0.9);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container { max-width: 1100px; margin: auto; padding: 2rem; }
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.hidden { display: none; }
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+}
+
+.btn-external {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #739072; /* Your Sage Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(115, 144, 114, 0.3);
+}
+
+.btn-external:hover {
+    background-color: #4f6f52;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(115, 144, 114, 0.4);
+}
+
+/* This targets links that start with "http" (external) */
+a[href^="http"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    vertical-align: super;
+    opacity: 0.7;
+}
+
+.external-link {
+    color: #64748b;
+    text-decoration: none;
+    border-bottom: 1px dashed #64748b;
+    transition: color 0.2s;
+}
+
+.external-link:hover {
+    color: #739072;
+    border-bottom-style: solid;
+}
+
